@@ -16,6 +16,7 @@ CREATE TABLE superbowls (
     state varchar(50) DEFAULT NULL
 );
 
+# Because MySQL server running with --secure-file-priv, superbowl.csv uploaded to ProgramData/MySQL/MySQL Server 8.1/Uploads
 LOAD DATA INFILE '../Uploads/superbowl.csv'
 INTO TABLE superbowls
 FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
