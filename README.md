@@ -17,3 +17,6 @@ three were then loaded into the DW.
 To create the fact table, which would list each Super Bowl, I used lookups and utilized the three new dimension tables placing foreign keys in the data over the MVP, stadium, winning team, and losing team.
 A fourth dimension table was introduced as well, the date dimension, which then replaced the game_date column. Lastly, weather data was introduced using another API call to a service that returned various
 statistics given a day and location. Of these statistics, the maximum and minimum temperature at 2m, the precipitation sum, and	the windspeed max at 10m were included in the fact table.
+
+The CountMVPsSQLScriptTest.sql demonstrates the functionality of the ETL described by joining the dimension tables dim_players and dim_teams to the fact table and querying each Super Bowl MVP, 
+the number of times they won Super Bowl MVP, and the number of distinct teams they won MVP with (the only person to win MVP with two teams is Tom Brady).
